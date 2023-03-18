@@ -14,7 +14,7 @@ jobs:
         run: curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok;
  
       - name: Ngrok Auth
-        run: ngrok config add-authtoken ${{secret.2MrYCRq6y6cuYo6cfkKCDD2ZfbF_3tKujJ8oEgM3Cx7u59vUJ}}
+        run: ngrok config add-authtoken ${{secret.2MrYCRq6y6cuYo6cfkKCDD2ZfbF_3tKujJ8oEgM3Cx7u59vUJ }}
 
       - name: Configure Firewall
         run: sudo ufw allow 3389/tcp
